@@ -53,10 +53,10 @@ const getProduct = (async (idx)=>{
     loader.classList.remove("active")
 })
 
-// exitBtn.addEventListener('click', ()=>{
-//     modal.classList.remove("active")
-//     // exitBtn.classList.remove("active")
-// })
+exitBtn.addEventListener('click', ()=>{
+    modal.classList.remove("active")
+    exitBtn.classList.remove("active")
+})
 
 async function getData (api) {
     let req = await fetch(api)
