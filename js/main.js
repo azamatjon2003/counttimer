@@ -8,14 +8,15 @@ const modal = document.querySelector(".modal")
 const exitBtn = document.querySelector(".exit-icon")
 const modalInfo = document.querySelector(".modal-info")
 const ratedEl = document.getElementById("ratedEl")
+const loader = document.getElementsByClassName("loader")[0]
 
 const api_link = 'https://fakestoreapi.com/products'
 
 var otsenka = [];
 
 const getProduct = (async (idx)=>{
-    
-    
+    loader.classList.add("active")
+
     const api_link = `https://fakestoreapi.com/products/${idx}`
     modal.classList.add("active")
     exitBtn.classList.add("active")
@@ -37,7 +38,7 @@ const getProduct = (async (idx)=>{
         
     </div>
     `
-
+    loader.classList.remove("active")
 })
 
 exitBtn.addEventListener('click', ()=>{
@@ -60,6 +61,8 @@ async function getData (api) {
                 <i class='bx bx-shopping-bag add-cart'></i>
         </div>
         `
+        
+        loader.classList.remove("active")
     })
 }
 
