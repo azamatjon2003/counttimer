@@ -55,7 +55,7 @@ header {
 .cart-img {
     width: 100px;
     height: 100px;
-    object-fit: contain;
+    object-fit: cover;
     padding: 10px;
 }
 /* .detail-box {
@@ -156,6 +156,8 @@ header {
     border-radius: 4px;
 }
 
+
+
 .cart-price{
     font-weight: 500;
 }
@@ -188,25 +190,31 @@ header {
 }
 .shop-content{
     display: grid;
+    padding-top: 50px;
     grid-template-columns: repeat(auto-fit, minmax(220px,auto));
     gap: 1.5rem;
     text-align: left;
     margin-bottom: 1.5rem;
 }
 
+
 .product-box {
     position: relative;
+    overflow: hidden;
+    transition:.2s;
+}
+.product-box:hover{
+    scale: 1.02;
+    border: 1px solid var(--text-color);
+    box-shadow: 0 0 1px 7px rgba(2, 209, 126, 0.437);
 }
 
-.product-box:hover {
-    padding: 10px;
-    border: 1px solid var(--text-color);
-    transition: .4s;
-}
 .product-img{
     width: 100%;
-    height: auto;
+    height: 300px;
+    object-fit: contain;
     margin-bottom: 0.5rem;
+    transition:  .4s linear;
 }
 .product-title {
     font-size: 1.1rem;
@@ -229,4 +237,79 @@ header {
 }
 .add-cart:hover {
     background: hsl(249, 32%, 17%);
+}
+.modal{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #00000086;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s linear;
+}
+.modal.active{
+    top: 0;
+}
+.exit-icon{
+    display: none;
+    justify-content: end;
+    font-size: 30px;
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    color: white;
+    scale: 1.5;
+    transition: .3s linear;
+    cursor: pointer;
+}
+.exit-icon.active{
+    display: flex;
+}
+.exit-icon:hover{
+    scale: 1.2;
+    color: rgb(34, 255, 0);
+}
+.modal-info{
+    width: 80%;
+    height: 80vh;
+    background-color: #fff;
+    border-radius: 20px 0 20px 0;
+    border: 2px dotted rgb(34, 255, 0);
+    animation: hover ease-in infinite 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 30px;
+    font-family: sans-serif ; 
+
+}
+#priceEl{
+    font-size: 18px;
+}
+.product-image{
+    width: 250px;
+    height: 400px;
+    object-fit: contain;
+}
+#ratedEl{
+    padding: 10px 0;
+    font-size: large;
+}
+.title{
+    font-size: 22px;
+    padding: 10px 0;
+    font-style: oblique;
+}
+
+@keyframes hover {
+    50%{
+        box-shadow:  0 0 10px 20px inset rgba(32, 163, 147, 0.9);
+    }
+    100%{
+        box-shadow:  0 0 1px 30px inset rgba(4, 203, 229, 0.1);
+    }
 }

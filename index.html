@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,13 +9,23 @@
     <link rel="stylesheet" href="./css/main.css">
     <!-- Box icons link-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
     <!-- header -->
     <header>
+        <div class="modal">
+            <div class="exit-icon" ><i class="fa-solid fa-circle-xmark"></i></div>
+            <div class="modal-info">
+            
+            </div>
+
+        </div>
         <!-- navbar -->
         <div class="nav container">
+            <!-- modal -->
+
             <a href="#" class="logo">Ecommerce</a>
             <!-- Cart icon -->
             <i class='bx bx-shopping-bag' id="cart-icon"></i>
@@ -37,70 +46,17 @@
         </div>
     </header>
     <!-- shop -->
-    <section class="shop container">
+    <section class="shop container" >
         <h2 class="section-title">Shop Products</h2>
         <!-- content -->
-        <div class="shop-content">
-            <!-- box1 -->
-            <div class="product-box">
-                <img src="./img/product1.jpg" alt="" class="product-img">
-                <h2 class="product-title">AEROREADY SHIRT</h2>
-                <span>$</span><span class="price">25</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <!-- box2 -->
-            <div class="product-box">
-                <img src="./img/product2.jpg" alt="" class="product-img">
-                <h2 class="product-title">WIRELESS AIRBUDS</h2>
-                <span>$</span><span class="price">100</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <!-- box3 -->
-            <div class="product-box">
-                <img src="./img/product3.jpg" alt="" class="product-img">
-                <h2 class="product-title">HUDED PARKA</h2>
-                <span>$</span><span class="price">45</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <!-- box4 -->
-            <div class="product-box">
-                <img src="./img/product4.jpg" alt="" class="product-img">
-                <h2 class="product-title">STROW</h2>
-                <span>$</span><span class="price">24.04</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <!-- box5 -->
-            <div class="product-box">
-                <img src="./img/product5.jpg" alt="" class="product-img">
-                <h2 class="product-title">AEROREADY SHIRT</h2>
-                <span>$</span><span class="price">35</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <!-- box6 -->
-            <div class="product-box">
-                <img src="./img/product6.jpg" alt="" class="product-img">
-                <h2 class="product-title">SILVER STALL</h2>
-                <span>$</span><span class="price">55</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <!-- box7 -->
-            <div class="product-box">
-                <img src="./img/product7.jpg" alt="" class="product-img">
-                <h2 class="product-title">BACKPACK</h2>
-                <span>$</span><span class="price">25</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <!-- box8 -->
-            <div class="product-box">
-                <img src="./img/product8.jpg" alt="" class="product-img">
-                <h2 class="product-title">ULTRABOOST 22</h2>
-                <span>$</span><span class="price">25</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-        </div>
+        <div class="shop-content"></div>
     </section>
     <!-- link to js -->
     <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
-</html>
+</html>-
