@@ -9,6 +9,18 @@ const exitBtn = document.querySelector(".exit-icon")
 const modalInfo = document.querySelector(".modal-info")
 const ratedEl = document.getElementById("ratedEl")
 const loader = document.getElementsByClassName("loader")[0]
+const header = document.querySelector("header")
+const btnBuy = document.querySelector(".btn-buy")
+
+
+btnBuy.addEventListener('click', ()=>{
+    header.className = "active"
+
+    setTimeout(() => {
+        header.className = ""
+    }, 1000);
+    cart.classList.remove("active")
+})
 
 const api_link = 'https://fakestoreapi.com/products'
 
@@ -41,10 +53,10 @@ const getProduct = (async (idx)=>{
     loader.classList.remove("active")
 })
 
-exitBtn.addEventListener('click', ()=>{
-    modal.classList.remove("active")
-    exitBtn.classList.remove("active")
-})
+// exitBtn.addEventListener('click', ()=>{
+//     modal.classList.remove("active")
+//     // exitBtn.classList.remove("active")
+// })
 
 async function getData (api) {
     let req = await fetch(api)

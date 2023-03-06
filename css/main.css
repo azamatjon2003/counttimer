@@ -109,7 +109,14 @@ header {
     justify-content: space-between;
     padding: 20px 0;
 }
+header.active{
+    background: #d70c0c;
+    color: white ;
+}
 
+header.active .logo{
+    color: white;
+}
 .logo{
     font-size: 1.1rem;
     color: var(--text-color);
